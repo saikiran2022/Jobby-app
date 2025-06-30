@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import Cookies from 'js-cookie'
-import { Navigate, useNavigate } from 'react-router-dom'  // Added useNavigate import
+import { Navigate, useNavigate } from 'react-router-dom'
 import './index.css'
 
 class Login extends Component {
@@ -25,8 +25,8 @@ class Login extends Component {
     event.preventDefault()
     let { username, password } = this.state
 
-    if (username.toLowerCase().trim() === 'vikas') username = 'rahul'
-    if (password === 'vikas@2024') password = 'rahul@2021'
+    if (username.toLowerCase().trim() === 'saikiran') username = 'rahul'
+    if (password === 'Albertsai@143') password = 'rahul@2021'
 
     const userDetails = { username, password }
     const options = {
@@ -61,7 +61,7 @@ class Login extends Component {
         type="text"
         value={this.state.username}
         className="login-input-field"
-        placeholder="vikas"
+        placeholder="saikiran"
         id="username"
         onChange={this.updateUsername}
       />
@@ -77,7 +77,7 @@ class Login extends Component {
         type="password"
         value={this.state.password}
         className="login-input-field"
-        placeholder="vikas@2024"
+        placeholder="Albertsai@143"
         id="password"
         onChange={this.updatePassword}
       />
@@ -113,7 +113,6 @@ class Login extends Component {
   }
 }
 
-// Wrap with withRouter replacement for v6
 export default function(props) {
   const navigate = useNavigate()
   return <Login {...props} navigate={navigate} />
